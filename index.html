@@ -2,130 +2,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Forbidden Method</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('matrix-background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      font-family: Arial, sans-serif;
+      background-color: black;
       color: white;
       text-align: center;
-      padding: 20px;
     }
 
     h1 {
-      font-size: 2.5em;
       color: gold;
-      text-shadow: 0 0 20px gold;
-      margin-bottom: 0.2em;
+      font-size: 2em;
+      text-shadow: 0 0 10px gold;
+      margin-top: 20px;
     }
 
     h2 {
-      font-size: 1.3em;
+      font-size: 1.2em;
+      margin: 10px 20px 20px 20px;
       color: white;
-      max-width: 90%;
-      margin: 0 auto 1em;
     }
 
-    .video-box {
-      width: 100%;
+    .video-container {
+      position: relative;
+      width: 90%;
       max-width: 640px;
-      aspect-ratio: 16/9;
-      margin: 0 auto 1em;
-      background-color: black;
-      box-shadow: 0 0 20px #00ff00;
-      border-radius: 8px;
+      margin: 20px auto;
+      box-shadow: 0 0 20px lime;
     }
 
-    .cta-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 2em 0;
-    }
-
-    .pill-hand {
-      width: 60px;
+    video {
+      width: 100%;
       height: auto;
-      margin: 0 10px;
+      display: block;
+    }
+
+    .unmute-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 0.9em;
     }
 
     .cta-button {
       background-color: gold;
       color: black;
-      font-weight: bold;
-      font-size: 1.1em;
       padding: 15px 25px;
+      font-size: 1em;
+      font-weight: bold;
       border: none;
-      border-radius: 30px;
+      border-radius: 40px;
       cursor: pointer;
       box-shadow: 0 0 20px gold;
+      margin: 20px 0;
+      display: inline-block;
     }
 
-    .subtitle {
+    .subtext {
       font-style: italic;
       font-size: 0.9em;
-      margin: 1em auto 1em;
       color: white;
     }
 
-    .benefits {
-      max-width: 500px;
-      margin: 0 auto;
-      text-align: left;
-      line-height: 1.8em;
+.checklist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      margin: 30px auto 60px auto;
       font-size: 1em;
     }
 
-    .benefits span {
-      display: block;
-      margin-bottom: 0.5em;
+    .checklist-item {
+      font-weight: bold;
+      padding: 8px 0;
+      width: 100%;
+      max-width: 600px;
     }
 
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2em;
-      }
+    .pill-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
 
-      h2 {
-        font-size: 1em;
-      }
+    .pill-container img {
+      height: 55px;
+      width: auto;
+    }
 
-      .cta-button {
-        font-size: 1em;
-        padding: 12px 18px;
-      }
+    body {
+      background-color: black;
+      background-image: url('https://i.ibb.co/kMH2XxC/matrix-green.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+      text-align: left;
+      width: 90%;
+      max-width: 500px;
+      margin: 20px auto 40px auto;
+      font-size: 1em;
+    }
 
-      .pill-hand {
-        width: 50px;
-      }
+    .benefits li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>WHAT IF YOU KNEW?</h1>
+  <h1>WHAT IF YOU KNEW...</h1>
   <h2>How to do the one thing that will give your mind the power to change the world?</h2>
-  <div class="video-box"></div>
 
-  <div class="cta-section">
-    <img src="left-gold-hand.png" class="pill-hand" alt="Red Pill Hand">
-    <button class="cta-button">🔓 Unlock the Forbidden Method</button>
-    <img src="right-gold-hand.png" class="pill-hand" alt="Blue Pill Hand">
+  <div class="video-container">
+    <video id="mainVideo" autoplay muted playsinline>
+      <source src="july-9.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button class="unmute-btn" onclick="document.getElementById('mainVideo').muted = false; this.style.display='none';">🔊 Tap to Unmute</button>
   </div>
 
-  <div class="subtitle">
-    & you’ll get… a ebook & video step by step Guide to 👁️
-  </div>
+  <button class="cta-button">🔓 Unlock the Forbidden Method</button>
+  <p class="subtext">Complete Ebook & step by step Video guide to 🔑</p>
 
   <div class="benefits">
-    <span>✅ how to use your hidden superpower to change anything</span>
-    <span>✅ how to break the old systems control over your life</span>
-    <span>✅ how to take your power back and use it for you</span>
-    <span>✅ the one hidden power of your mind they don’t want you to use</span>
-    <span>✅ the method to think anything into existence</span>
+    <div class="checklist-item"><strong>✅ how to use your hidden superpower to change anything</strong></div>
+    <div class="checklist-item"><strong>✅ how to break the old systems control over your life</strong></div>
+    <div class="checklist-item"><strong>✅ how to take your power back and use it for you</strong></div>
+    <div class="checklist-item"><strong>✅ the one hidden power of your mind they don’t want you to use</strong></div>
+    <div class="checklist-item"><strong>✅ the method to think anything into existence</strong></div>
   </div>
 </body>
 </html>
