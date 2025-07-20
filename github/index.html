@@ -2,59 +2,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Forbidden Method</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
+      background: url('matrix-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
       text-align: center;
+      padding: 20px;
     }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: gold;
+      text-shadow: 0 0 20px gold;
+      margin-bottom: 0.2em;
     }
-    video {
-      max-width: 90vw;
-      max-height: 60vh;
-      border: 2px solid gold;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+
+    h2 {
+      font-size: 1.3em;
+      color: white;
+      max-width: 90%;
+      margin: 0 auto 1em;
     }
-    .btn {
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: gold;
-      color: #000;
-      border: none;
-      border-radius: 30px;
+
+    .video-box {
+      width: 100%;
+      max-width: 640px;
+      aspect-ratio: 16/9;
+      margin: 0 auto 1em;
+      background-color: black;
+      box-shadow: 0 0 20px #00ff00;
+      border-radius: 8px;
+    }
+
+    .cta-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2em 0;
+    }
+
+    .pill-hand {
+      width: 60px;
+      height: auto;
+      margin: 0 10px;
+    }
+
+    .cta-button {
+      background-color: gold;
+      color: black;
       font-weight: bold;
       font-size: 1.1em;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 30px;
       cursor: pointer;
-      text-decoration: none;
-      transition: 0.3s;
+      box-shadow: 0 0 20px gold;
     }
-    .btn:hover {
-      background: #fff4b0;
+
+    .subtitle {
+      font-style: italic;
+      font-size: 0.9em;
+      margin: 1em auto 1em;
+      color: white;
+    }
+
+    .benefits {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+      line-height: 1.8em;
+      font-size: 1em;
+    }
+
+    .benefits span {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1em;
+      }
+
+      .cta-button {
+        font-size: 1em;
+        padding: 12px 18px;
+      }
+
+      .pill-hand {
+        width: 50px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>This is the one thing they never wanted you to know</h1>
-  <video autoplay muted playsinline loop>
-    <source src="your-video.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <a href="https://your-actual-website.com" class="btn">🔓 Unlock the Forbidden Method</a>
+  <h1>WHAT IF YOU KNEW?</h1>
+  <h2>How to do the one thing that will give your mind the power to change the world?</h2>
+  <div class="video-box"></div>
+
+  <div class="cta-section">
+    <img src="left-gold-hand.png" class="pill-hand" alt="Red Pill Hand">
+    <button class="cta-button">🔓 Unlock the Forbidden Method</button>
+    <img src="right-gold-hand.png" class="pill-hand" alt="Blue Pill Hand">
+  </div>
+
+  <div class="subtitle">
+    & you’ll get… a ebook & video step by step Guide to 👁️
+  </div>
+
+  <div class="benefits">
+    <span>✅ how to use your hidden superpower to change anything</span>
+    <span>✅ how to break the old systems control over your life</span>
+    <span>✅ how to take your power back and use it for you</span>
+    <span>✅ the one hidden power of your mind they don’t want you to use</span>
+    <span>✅ the method to think anything into existence</span>
+  </div>
 </body>
 </html>
